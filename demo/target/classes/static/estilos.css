@@ -1,0 +1,24 @@
+/* Estilo básico para la tabla */
+.tablafn1 {
+    margin-top: 20px;
+}
+
+.tablafn1 table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+}
+
+.tablafn1 table th, .tablafn1 table td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.tablafn1 table th {
+    background-color: #f2f2f2;
+}
+
+.tablafn1 table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}

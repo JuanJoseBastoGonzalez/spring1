@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Asumiendo que tienes un archivo details.css en tu proyecto -->
+    <link th:href="@{/details.css}" rel="stylesheet" />
+    <title>Formulario login</title>
+</head>
+<body>
+    <h2>Formulario login</h2>
+    <form th:action="@{/alterno/create}"  th:object="${user}" method="post">
+        <label for="nombre"  >usuario:</label><br>
+        <input type="text" th:field="*{nombre}"  required><br>
+        
+        <label for="apellido">contrasena:</label><br>
+        <input type="text" th:field="*{apellido}" required><br>
+
+        
+        <input type="submit" value="Enviar">
+    </form>
+
+
+    <div class="tablafn1">
+        <table>
+            <thead>
+                <tr>
+                    <th>usuario</th>
+                    <th>contrasena</th>
+                </tr>
+            </thead>
+           <tbody>
+            <tr th:each="u,iter:${usuarios}">
+                <td th:text="${u.nombre}"></td>
+                <td th:text="${u.apellido}"></td>
+            </tr>
+    
+           </tbody>
+    
+        </table>
+        
+    </div>
+    
+</body>
+</html>
